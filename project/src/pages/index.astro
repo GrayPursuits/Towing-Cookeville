@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cookeville TN Towing - 24/7 Emergency Towing Services">
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-content">
+				<h1>24/7 Emergency Towing in Cookeville, TN</h1>
+				<p class="tagline">Fast, Reliable & Professional Service When You Need It Most</p>
+				<a href="#request-tow" class="cta-button">Need a Tow? Click Here</a>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="section">
+			<h2>Our Services</h2>
+			<div class="services-grid">
+				<div class="service-card">
+					<h3>Emergency Towing</h3>
+					<p>24/7 emergency towing services for accidents and breakdowns</p>
+				</div>
+				<div class="service-card">
+					<h3>Roadside Assistance</h3>
+					<p>Jump starts, tire changes, and fuel delivery</p>
+				</div>
+				<div class="service-card">
+					<h3>Vehicle Recovery</h3>
+					<p>Specialized equipment for any situation</p>
+				</div>
+				<div class="service-card">
+					<h3>Long Distance Towing</h3>
+					<p>Safe and secure transport across any distance</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section id="why-us" class="section">
+			<h2>Why Choose Us?</h2>
+			<div class="features-grid">
+				<div class="feature">
+					<h3>Fast Response Time</h3>
+					<p>Usually on site within 30 minutes or less</p>
+				</div>
+				<div class="feature">
+					<h3>24/7 Availability</h3>
+					<p>We're here when you need us, day or night</p>
+				</div>
+				<div class="feature">
+					<h3>Experienced Team</h3>
+					<p>Professional, certified towing operators</p>
+				</div>
+				<div class="feature">
+					<h3>Fair Pricing</h3>
+					<p>Competitive rates with no hidden fees</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Request Tow Form Section -->
+		<section id="request-tow" class="section form-section">
+			<h2>Request a Tow</h2>
+			<form id="tow-form" class="tow-form">
+				<div class="form-grid">
+					<div class="form-group">
+						<label for="name">Full Name*</label>
+						<input type="text" id="name" name="name" required>
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone Number*</label>
+						<input type="tel" id="phone" name="phone" required>
+					</div>
+					<div class="form-group">
+						<label for="location">Current Location*</label>
+						<input type="text" id="location" name="location" required>
+					</div>
+					<div class="form-group">
+						<label for="vehicle">Vehicle Description*</label>
+						<input type="text" id="vehicle" name="vehicle" placeholder="Year, Make, Model" required>
+					</div>
+					<div class="form-group full-width">
+						<label for="issue">Describe the Issue*</label>
+						<textarea id="issue" name="issue" required></textarea>
+					</div>
+				</div>
+				<button type="submit" class="submit-button">Request Tow Now</button>
+			</form>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="section">
+			<h2>Contact Us</h2>
+			<div class="contact-info">
+				<p class="phone">Emergency: (555) 123-4567</p>
+				<p class="address">123 Main Street, Cookeville, TN 38501</p>
+				<p class="service-area">Serving Cookeville and surrounding areas</p>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* Base Styles */
+	:root {
+		--primary-color: #e63946;
+		--secondary-color: #1d3557;
+		--accent-color: #457b9d;
+		--light-color: #f1faee;
+		--dark-color: #1d3557;
+	}
+
+	/* Hero Section */
+	.hero {
+		height: 100vh;
+		background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+					url('/towing-bg.jpg') center/cover no-repeat;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: white;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		padding: 2rem;
+	}
+
+	.hero h1 {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.tagline {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	/* Sections */
+	.section {
+		padding: 5rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Services Grid */
+	.services-grid, .features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.service-card {
+		background: var(--light-color);
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	/* Form Styles */
+	.form-section {
+		background: var(--light-color);
+		border-radius: 8px;
+		padding: 3rem 2rem;
+	}
+
+	.tow-form {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.form-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.form-group.full-width {
+		grid-column: 1 / -1;
+	}
+
+	label {
+		margin-bottom: 0.5rem;
+		color: var(--dark-color);
+	}
+
+	input, textarea {
+		padding: 0.8rem;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		font-size: 1rem;
+	}
+
+	textarea {
+		height: 100px;
+		resize: vertical;
+	}
+
+	/* Buttons */
+	.cta-button, .submit-button {
+		background: var(--primary-color);
+		color: white;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 4px;
+		font-size: 1.2rem;
+		cursor: pointer;
+		text-decoration: none;
+		display: inline-block;
+		transition: background-color 0.3s;
+	}
+
+	.cta-button:hover, .submit-button:hover {
+		background: #c1121f;
+	}
+
+	/* Contact Section */
+	.contact-info {
+		text-align: center;
+		font-size: 1.2rem;
+	}
+
+	.phone {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--primary-color);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2.5rem;
+		}
+
+		.form-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	document.getElementById('tow-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		alert('Thank you for your request! We will contact you shortly.');
+	});
+</script>
